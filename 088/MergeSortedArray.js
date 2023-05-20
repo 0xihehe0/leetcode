@@ -2,7 +2,7 @@
  * @Author: yaojinxi 864554492@qq.com
  * @Date: 2023-05-11 12:06:59
  * @LastEditors: yaojinxi 864554492@qq.com
- * @LastEditTime: 2023-05-18 21:02:36
+ * @LastEditTime: 2023-05-20 22:56:44
  * @FilePath: \leetcode\088\MergeSortedArray.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -36,7 +36,7 @@ var sorts = function (m, n, nums1, nums2) {
     nums1.splice(m);
 };
 
-let nums1 = [1, 2, 3, 0, 0, 0];
+let nums1 = [1, 2, 3, 4, 0, 0];
 let nums2 = [2, 5, 6];
 let m = 3;
 let n = 3;
