@@ -2,7 +2,7 @@
  * @Author: yaojinxi 864554492@qq.com
  * @Date: 2023-05-11 12:06:59
  * @LastEditors: yaojinxi 864554492@qq.com
- * @LastEditTime: 2023-07-03 22:01:28
+ * @LastEditTime: 2023-07-15 23:24:47
  * @FilePath: \leetcode\088\MergeSortedArray.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -22,8 +22,6 @@ var merge = function (nums1, m, nums2, n) {
         } else {
             cur = nums2[p2--];
         }
-        console.log(cur);
-        
         nums1[tail--] = cur;
     }
 };
