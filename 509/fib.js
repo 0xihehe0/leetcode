@@ -7,7 +7,7 @@ var fib = function (n) {
         return 1;
     }
     return fib(n - 1) + fib(n - 2);
-};
+}; 
 
 let n = 4;
 console.log(fib(n));
