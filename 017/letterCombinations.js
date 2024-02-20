@@ -15,6 +15,9 @@ let map = new Map([
 
 var letterCombinations = function (digits) {
     let allarr = [];
+    if(digits.length === 0){
+        return allarr;
+    }
     generateCombinations(0, allarr, '', digits);
     return allarr
 };
