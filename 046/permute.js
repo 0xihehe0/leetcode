@@ -16,16 +16,15 @@ function backTrack(list, nums, booleanList, resList) {
         resList.push(newList);
         return;
     }
-
+    let duplicated = new Set();
     for (let i = 0; i < nums.length; i++) {
         let value = nums[i];
-        
-        if (!booleanList[i]) {
+
+        if (!booleanList[i] && duplicated.has(value)) {
             booleanList[i] = true;
             list.push(value);
-            console.log(list);
+            duplicated.add(value);
             backTrack(list, nums, booleanList, resList);
-            console.log(list);
             booleanList[i] = false;
             list.pop();
         }
