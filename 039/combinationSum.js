@@ -2,7 +2,7 @@
  * @Author: yaojinxi 864554492@qq.com
  * @Date: 2024-03-04 16:53:54
  * @LastEditors: yaojinxi 864554492@qq.com
- * @LastEditTime: 2024-03-04 17:10:09
+ * @LastEditTime: 2024-03-05 20:43:55
  * @FilePath: \leetcode\039\combinationSum.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -29,7 +29,7 @@ function combine(resList, target, total, checkList, candidates) {
     for (let index = total; index < candidates.length; index++) {
         const element = candidates[index];
         if (target - element < 0) {
-            break;
+            continue;
         }
         checkList.push(element);
         combine(resList, target - element, index, checkList, candidates);
