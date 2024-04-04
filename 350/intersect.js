@@ -2,7 +2,7 @@
  * @Author: yaojinxi 864554492@qq.com
  * @Date: 2024-04-04 14:06:41
  * @LastEditors: yaojinxi 864554492@qq.com
- * @LastEditTime: 2024-04-04 14:25:23
+ * @LastEditTime: 2024-04-04 14:32:45
  * @FilePath: \leetcode\350\intersect.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -11,7 +11,7 @@
  * @param {number[]} nums2
  * @return {number[]}
  */
-var intersect = function (nums1, nums2) {
+var intersect1 = function (nums1, nums2) {
     nums1 = nums1.sort(function (a, b) {
         return a - b;
     });
@@ -34,12 +34,23 @@ var intersect = function (nums1, nums2) {
             p2++;
         }
     }
-
-    return res
+    return res;
 };
 
-let nums1 = [1, 4, 2, 5, 12, 56];
+var intersect2 = function (nums1, nums2) {
+    list = new Map();
+    for (var i = 0; i < nums1.length; i++) {
+        let count = 0;
+        if(list.has(nums1[i])) {
+            list.set(nums1[i],count + 1);
+        }
+        
+    }
+};
 
-let nums2 = [4, 2, 5, 121, 24];
+let nums1 = [1, 4, 4, 5, 12, 56];
 
-console.log(intersect(nums1, nums2));
+let nums2 = [4, 4, 5, 121, 24];
+
+console.log(intersect1(nums1, nums2));
+console.log(intersect2(nums1, nums2));
