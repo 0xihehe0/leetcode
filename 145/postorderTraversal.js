@@ -2,7 +2,7 @@
  * @Author: yaojinxi 864554492@qq.com
  * @Date: 2024-04-06 14:17:44
  * @LastEditors: yaojinxi 864554492@qq.com
- * @LastEditTime: 2024-04-06 14:47:33
+ * @LastEditTime: 2024-04-07 16:12:44
  * @FilePath: \leetcode\144\preorderTraversal.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -56,7 +56,7 @@ var postorderTraversal = function (root) {
 let n1 = new TreeNode(1),
     n2 = new TreeNode(2),
     n3 = new TreeNode(3),
-    n4 = new TreeNode(4),
+    n4 = new TreeNode(8),
     n5 = new TreeNode(5);
 // 构建节点之间的引用（指针）
 n1.left = n2;
