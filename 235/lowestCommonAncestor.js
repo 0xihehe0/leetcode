@@ -2,7 +2,7 @@
  * @Author: yaojinxi 864554492@qq.com
  * @Date: 2024-04-11 16:44:46
  * @LastEditors: yaojinxi 864554492@qq.com
- * @LastEditTime: 2024-04-11 16:50:35
+ * @LastEditTime: 2024-04-11 17:18:57
  * @FilePath: \leetcode\235\lowestCommonAncestor.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -18,19 +18,20 @@ class TreeNode {
 }
 
 var lowestCommonAncestor = function (root, p, q) {
-    let list = [];
-    const dfs = root => {
-        if (root === null) {
-            return;
-        }
+   // 确保 p 和 q 是值
+   let pVal = p.val;
+   let qVal = q.val;
 
-        dfs(root.left);
-        list.push(root.val);
-        dfs(root.right);
-    };
-
-    dfs(root);
-    console.log(list);
+   // 如果两个值都小于根节点，则LCA在左子树
+   if (pVal < root.val && qVal < root.val) {
+       return lowestCommonAncestor(root.left, p, q);
+   }
+   // 如果两个值都大于根节点，则LCA在右子树
+   else if (pVal > root.val && qVal > root.val) {
+       return lowestCommonAncestor(root.right, p, q);
+   }
+   // 否则，当前节点就是最近的公共祖先
+   return root;
 };
 
 let n1 = new TreeNode(4),
@@ -44,6 +45,6 @@ n1.right = n3;
 n2.left = n4;
 n2.right = n5;
 
-let p = 3;
-let q = 4;
+let p = 1;
+let q = 3;
 console.log(lowestCommonAncestor(n1, p, q));
